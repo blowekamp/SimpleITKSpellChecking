@@ -399,7 +399,7 @@ def main():
 
     suffixes = [*set(args.suffix)]  # remove duplicates
 
-    if output_lvl > 1:
+    if any([args.brief, output_lvl >= 0]):
         print(f"Prefixes: {prefixes}")
         print(f"Suffixes: {suffixes}")
 
